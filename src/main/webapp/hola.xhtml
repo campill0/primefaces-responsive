@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:f="http://java.sun.com/jsf/core" xmlns:p="http://primefaces.org/ui">
+<h:head>
+<style>
+@import url(http://fonts.googleapis.com/css?family=Quicksand);
+body{font-family: 'Quicksand', sans-serif;   }
+.headerDiv,.menuDiv,.contentDiv {padding:30px;}
+.headerDiv div div,.footerDiv{    background: rgba(44, 44, 44, 0.57);    box-shadow: rgb(84, 84, 84) 3px 5px 29px -6px;}
+.headerDiv{text-align:center;}
+.footerDiv div div{  padding:30px;}
+
+ .footerDiv a:link, .footerDiv a:visited, .footerDiv a:hover,.footerDiv,.headerDiv{color:whitesmoke;}
+  i{margin-right:30px;}
+  .footerDiv{}
+  .contentDiv{background: rgba(44, 44, 44, 0.57);    box-shadow: rgb(84, 84, 84) 3px 5px 29px -6px;  }
+ /* .contentDiv span,.contentDiv h1, .contentDiv h2,.contentDiv h3, .contentDiv h4, .contentDiv h5,.contentDiv h6,.contentDiv p{color:white;}*/
+  span, h1,  h2,h3,  h4,  h5, h6,p{color:white;}
+ul{list-style: none;}
+ul {
+  list-style: none;
+  padding: 0px 0px 0px 0px;
+}
+.ui-menu {
+  background: none;
+  border: none;
+  margin:auto;
+   
+}
+.ui-menu .ui-menuitem-text,.ui-menu .ui-menuitem-link .ui-menuitem-icon, label {
+   color: whitesmoke;
+}
+
+body {
+	margin:0px;
+  /* Location of the image */
+  background-image: url(static/images/background-photo.jpg);
+  
+  /* Image is centered vertically and horizontally at all times */
+  background-position: center center;
+  
+  /* Image doesn't repeat */
+  background-repeat: no-repeat;
+  
+  /* Makes the image fixed in the viewport so that it doesn't move when 
+     the content height is greater than the image height */
+  background-attachment: fixed;
+  
+  /* This is what makes the background image rescale based on its container's size */
+  background-size: cover;
+  
+  /* Pick a solid background color that will be displayed while the background image is loading */
+  background-color:#464646;
+  
+  /* SHORTHAND CSS NOTATION
+   * background: url(background-photo.jpg) center center cover no-repeat fixed;
+   */
+}
+
+/* For mobile devices */
+@media only screen and (min-width: 35em) {.headerDiv,.menuDiv,.contentDiv { margin:15px;}}
+@media only screen and (max-width: 35em) {
+  body {
+    /* The file size of this background image is 93% smaller
+     * to improve page load speed on mobile internet connections */
+    background-image: url(static/images/background-photo-mobile-devices.jpg);
+  }
+   .footerDiv{text-align:center;}
+   	.headerDiv,.menuDiv,.contentDiv { margin:0px; margin-bottom:15px; margin-top:15px;}
+	}
+
+
+.ui-state-hover, .ui-widget-content .ui-state-hover, .ui-widget-header .ui-state-hover, .ui-state-focus, .ui-widget-content .ui-state-focus, .ui-widget-header .ui-state-focus{
+background:none;
+box-shadow:none;
+}
+span.ui-menuitem-text {
+  margin-left: 14px;
+}
+.ui-widget-header {
+    background: rgba(210, 0, 255, 0.14);
+  border: none;
+  font-weight: bold;
+  outline: 1px solid rgba(75, 28, 86, 0.88);
+
+  text-shadow: none;
+}
+.ui-widget-header,.ui-widget-header span  {
+color: whitesmoke;
+}
+button span, input {
+  color: rgb(71, 71, 71) ;
+  font-weight: bold;
+}
+
+button.ui-state-hover span, button.ui-state-active span {
+  color: white !important;
+}
+button.ui-state-active span{
+box-shadow:none;
+
+}
+.ui-state-focus:focus { outline:none !important }
+input.ui-state-hover , button.ui-state-hover {
+
+color:white;
+}
+input.ui-state-focus:focus, button.ui-state-focus:focus, button.ui-state-focus:focus span {
+  color:white;
+}
+
+input.ui-state-active:active, button.ui-state-active:active {
+ color:white;
+}
+.ui-menu{ width:100%; background: rgba(44, 44, 44, 0.57);    box-shadow: rgb(84, 84, 84) 3px 5px 29px -6px; }
+.ui-panel-title{ font-size:1.5em;}
+span.ui-messages-info-detail,
+span.ui-messages-info-summary,
+span.ui-messages-warn-detail,
+span.ui-messages-warn-summary,
+span.ui-messages-error-detail,
+span.ui-messages-error-summary
+{ 
+color: whitesmoke;
+}
+button.ui-state-focus:focus span {
+  color: white !important;
+}
+.saludo {
+  padding: 0.7em;
+  text-align: center;
+background: rgba(210, 0, 255, 0.08);
+  outline: 1px solid rgba(210, 0, 255, 0.88);
+  display: block;
+  font-weight: bold;
+  margin-top: 1em;
+}
+.ui-messages-info, .ui-message-info {
+  
+background: rgba(0, 212, 255, 0.08);
+  border-color: rgba(0, 212, 255, 0.57);
+}
+.ui-messages-warn, .ui-message-warn {
+  background: rgba(255, 165, 0, 0.08);
+  border-color: rgba(255, 165, 0, 0.57);
+}
+
+.ui-messages-error, .ui-message-error {
+  background: rgba(255, 0, 0, 0.08);
+  border-color: rgba(255, 0, 0, 0.57);
+}
+
+
+.ui-panel{background:none;border:none;}
+label, input, button{margin-right:10px !important;}
+input.ui-state-focus{box-shadow:none;}
+.footerCopyRight{font-size:0.7em; text-align:center;}
+</style>
+</h:head>
+<h:body >
+<div>
+<div class="ui-grid headerDiv ui-grid-responsive">
+  <div class="ui-grid-row">
+    <div class="ui-grid-col-12">
+     <h1> Cabecera</h1>
+    </div>
+  </div>
+</div>
+<div class="ui-grid  ui-grid-responsive">
+  <div class="ui-grid-row">
+    <div class="ui-grid-col-3 menuDiv">
+
+<p:menu >
+    <p:submenu label="Document">
+        <p:menuitem value="New" url="#" icon="fa fa-plus" />
+        <p:menuitem value="Refresh" url="#" icon="fa fa-refresh"/>
+    </p:submenu>
+    <p:submenu label="Navigations">
+        <p:menuitem value="Home" url="#"  icon="fa fa-home"/>
+        <p:menuitem value="User" url="#" icon="fa fa-user"/>
+    </p:submenu>
+</p:menu>
+
+
+</div>
+    <div class="ui-grid-col-9 contentDiv site-content">
+    <p:panel header="Formulario JSF de ejemplo">
+   
+		<h:form id="form" >
+		
+		
+		 <h:panelGrid columns="3">
+			<p:outputLabel value="nombre: " for="nombre" />
+				<p:inputText value="#{miControlador.nombre}" id="nombre" title="Nombre" required="true" >
+				<p:ajax event="click" listener="#{miControlador.resetNombre()}" update="@form"/>
+				</p:inputText>
+			<p:commandButton value="Saluda"  actionListener="#{miControlador.saluda}" update="saludo"/>
+		
+		
+		</h:panelGrid>
+		<p:messages id="messages"  showDetail="true" autoUpdate="true" closable="true" showIcon="true" escape="false" >
+		</p:messages>
+			<p:outputLabel id="saludo"  value="#{miControlador.saludo}" style="width:100%;" styleClass="saludo"/>
+			
+			</h:form>
+	</p:panel>
+	 <p:panel header="¿Qué es Lorem Ipsum?">
+<p><strong>Lorem Ipsum</strong> es simplemente el texto de relleno de las imprentas y archivos de texto. Lorem Ipsum ha sido el texto de relleno estándar de las industrias desde el año 1500, cuando un impresor (N. del T. persona que se dedica a la imprenta) desconocido usó una galería de textos y los mezcló de tal manera que logró hacer un libro de textos especimen. No sólo sobrevivió 500 años, sino que tambien ingresó como texto de relleno en documentos electrónicos, quedando esencialmente igual al original. Fue popularizado en los 60s con la creación de las hojas "Letraset", las cuales contenian pasajes de Lorem Ipsum, y más recientemente con software de autoedición, como por ejemplo Aldus  PageMaker, el cual incluye versiones de Lorem Ipsum.</p>
+ </p:panel>
+
+ <p:panel header="¿Por qué lo usamos?">
+<p>Es un hecho establecido hace demasiado tiempo que un lector se distraerá con el contenido del texto de un sitio mientras que mira su diseño. El punto de usar Lorem Ipsum es que tiene una distribución más o menos normal de las letras, al contrario de usar textos como por ejemplo "Contenido aquí, contenido aquí". Estos textos hacen parecerlo un español que se puede leer. Muchos paquetes de autoedición y editores de páginas web usan el Lorem Ipsum como su texto por defecto, y al hacer una búsqueda de "Lorem Ipsum" va a dar por resultado muchos sitios web que usan este texto si se encuentran en estado de desarrollo. Muchas versiones han evolucionado a través de los años, algunas veces por accidente, otras veces a propósito (por ejemplo insertándole humor y cosas por el estilo).</p>
+
+ </p:panel>
+	
+	</div>
+   </div>
+</div>
+<footer class="ui-grid footerDiv  ui-grid-responsive">
+  <div class="ui-grid-row">
+    <div class="ui-grid-col-2">
+     <ul>
+     <li><a href="#">Lorem</a></li>
+     <li><a href="#">ipsum</a></li>
+     <li><a href="#">dolor</a></li>
+     <li><a href="#">met</a></li>
+     <li><a href="#">sit</a></li>
+     </ul>
+    </div>
+    <div class="ui-grid-col-2">
+     <ul>
+     <li><a href="#">Lorem</a></li>
+     <li><a href="#">ipsum</a></li>
+     <li><a href="#">dolor</a></li>
+     <li><a href="#">met</a></li>
+     <li><a href="#">sit</a></li>
+     </ul>
+    </div>
+     <div class="ui-grid-col-8">
+    <i class="fa fa-twitter fa-5x"></i>
+     <i class="fa fa-facebook fa-5x"></i>
+      <i class="fa fa-vine fa-5x"></i>
+       <i class="fa fa-google-plus fa-5x"></i>
+        <i class="fa fa-git fa-5x"></i>
+         <i class="fa fa-in fa-5x"></i>
+     
+    </div>
+  </div>
+   <div class="ui-grid-row">
+    <div class="ui-grid-col-12 footerCopyRight">
+    Francisco Campillo Asensio 2015 ©
+    </div>
+    </div>
+</footer>
+
+	
+</div>
+
+</h:body>
+</html>
